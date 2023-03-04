@@ -1,6 +1,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="/Mica-ChatGPT/favicon.svg">
 
-# Mica-ChatGPT pour windows 8, 10, 11
+# Version 1.4 pour windows 8, 10, 11
 
 Prêt à converser avec l'avenir ? Découvrez Mica-ChatGPT, une application innovante qui intègre les dernières avancées en matière de prompt engineering et permet de créer vos propres prompts. Disponible en versions libre et entreprise, profitez d'une interface intuitive et agréable grâce à Electron pour échanger en toute simplicité avec ChatGPT, la pointe de l'IA conversationnelle.
 
