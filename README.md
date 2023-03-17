@@ -30,6 +30,9 @@
 
 * la version entreprise de Mica-ChatGPT offrira la flexibilité et la personnalisation dont elles ont besoin pour intégrer ChatGPT dans leur flux de travail et répondre à leurs besoins spécifiques en matière de conversation. </p>
 
+
+TELECHARGER ICI : https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.1/micaChatGPT_test.zip
+
 ---
 
 ###### Il est important de noter que la version standard de l'application Mica-ChatGPT est destinée uniquement à un usage personnel et non commercial. Les entreprises ne doivent pas l'utiliser pour des besoins professionnels, mais plutôt nous contacter par mail à 
