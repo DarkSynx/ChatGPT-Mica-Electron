@@ -33,7 +33,7 @@
 
 TELECHARGER ICI : 
 
-<a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.3/micaChatGPT_1.4.3.19032023.zip">micaChatGPT_test.zip 1.4.3</a>
+<a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.3/micaChatGPT_1.4.3_b.zip">micaChatGPT_test.zip 1.4.3</a>
 
 <a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.1/micaChatGPT_test.zip">micaChatGPT_test.zip 1.4.1</a>
 
