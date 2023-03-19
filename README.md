@@ -31,7 +31,10 @@
 * la version entreprise de Mica-ChatGPT offrira la flexibilité et la personnalisation dont elles ont besoin pour intégrer ChatGPT dans leur flux de travail et répondre à leurs besoins spécifiques en matière de conversation. </p>
 
 
-TELECHARGER ICI : <a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.1/micaChatGPT_test.zip">micaChatGPT_test.zip 1.4.1</a>
+TELECHARGER ICI : 
+<a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.3/micaChatGPT_1.4.3.19032023.zip">micaChatGPT_test.zip 1.4.3</a>
+<a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.1/micaChatGPT_test.zip">micaChatGPT_test.zip 1.4.1</a>
+
 
 ---
 
