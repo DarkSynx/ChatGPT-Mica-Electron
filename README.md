@@ -33,12 +33,11 @@
 
 ![image](https://user-images.githubusercontent.com/9467611/229366895-0d3a9b29-9a6c-465f-a8ee-54007fdc617c.png)
 
-
-
-
-https://user-images.githubusercontent.com/9467611/229367187-4503d5c8-d4da-4bd1-81c9-c681df7e1841.mp4
-
-
+-----
+<video src="https://user-images.githubusercontent.com/9467611/229367187-4503d5c8-d4da-4bd1-81c9-c681df7e1841.mp4" width="640" height="auto" controls>
+    Merci de mettre à jour votre navigateur pour lire la vidéo
+</video>
+-----
 
 TELECHARGER ICI : 
 <a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/tag/1.5.0">micaChatGPT_test.zip 1.5.0</a>
