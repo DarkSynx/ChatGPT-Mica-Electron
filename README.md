@@ -31,8 +31,13 @@
 * la version entreprise de Mica-ChatGPT offrira la flexibilité et la personnalisation dont elles ont besoin pour intégrer ChatGPT dans leur flux de travail et répondre à leurs besoins spécifiques en matière de conversation. </p>
 
 
-https://user-images.githubusercontent.com/9467611/229366895-0d3a9b29-9a6c-465f-a8ee-54007fdc617c.png
-https://user-images.githubusercontent.com/9467611/229366987-9f43f261-0a83-4225-bb8e-6025fd708297.mp4
+![image](https://user-images.githubusercontent.com/9467611/229366895-0d3a9b29-9a6c-465f-a8ee-54007fdc617c.png)
+
+
+
+
+https://user-images.githubusercontent.com/9467611/229367187-4503d5c8-d4da-4bd1-81c9-c681df7e1841.mp4
+
 
 
 TELECHARGER ICI : 
