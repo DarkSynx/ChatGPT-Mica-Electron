@@ -100,7 +100,7 @@ TELECHARGER ICI :
    que vous aurez créé dans cfg > add > newapp
 
 5. un script doit comporter plusieurs chose de départ
-```
+```js
 const modulename = 'gmail';
 const version = '1.0a';
 const {ipcRenderer} = require('electron');
@@ -161,8 +161,10 @@ window.addEventListener('load', () => {
         // c'est pour cela qu'il est important de nommer votre module
         
 });
-
 ```
+
+
+
 ![pub](https://user-images.githubusercontent.com/9467611/229370614-5f3c4788-5ae3-4d42-937b-5036b7cfb4fe.png)
 
 
