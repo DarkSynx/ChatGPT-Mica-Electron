@@ -1,0 +1,13 @@
+{
+	"gmail" : {
+		"link" : "https://mail.google.com/mail/x",
+		"linka": { "html" : "https://mail.google.com/mail/?ui=html", "small" : "https://mail.google.com/mail/mu/mp/110/"},
+		"dossier" : "gmail",
+		"nom" : "Gmail",
+		"sufixid" : "gmail",
+		"script" : "gmail.js",
+		"spancss" : "background-image: url('{{@PATHADD}}gmail/googleappicon.png');background-size: 42px calc(3307px / 1.52);background-position: 0 calc(-2415px / 1.52);",
+		"autre" : "",
+		"version" : "1.0a"
+	}
+}

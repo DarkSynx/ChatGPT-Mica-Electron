@@ -1,0 +1,122 @@
+<div id="mailchatgptblock" style="display: none">
+    <div id="mailchatgpt-bg"></div>
+    <div id="mailchatgpt">
+        <label>Ajouter des options au générateurs:
+            <button id="mailchatgptfermer">X</button>
+            <button id="mailchatgptenvoyer">Generer</button>
+            <button id="mailchatgptprompt">Prompt</button>
+        </label>
+        <div id="prompt" style="display:none;">
+            <textarea id="prompttext" name="prompttext">{{@myinjectprompttext}}</textarea>
+        </div>
+        <div id="genmail">
+            <input id="proposition" class="prop" name="proposition" placeholder="option: je suis Mathis du service SEO" value=""></input>
+            <textarea id="proposition2" class="prop" name="proposition2" placeholder="spécificité: ce mail est destiné à du SEO, ajoute une note d'humour à la fin" val="générer ce mail dans un format HTML"></textarea>
+            <textarea class="rctext" name="texte">
+                                    /* ne rien écrire ici pour le moment avant la génération */<br/>
+                                    /* le texte sera généré automatiquement ici dés que vous */<br/>
+                                    /* cliquerez sur le bouton "Générer" */<br/>
+                                </textarea>
+            <style>{{@myinjectfontawesome}}</style>
+            <style>{{@myinjectrichtextcss}}</style>
+            <style>
+                #mailchatgptblock {
+                    display:none
+                }
+
+                #mailchatgpt-bg {
+                    position:fixed;
+                    width:100%;
+                    height:100%;
+                    top:0;
+                    left:0;
+                    background-color:rgba(0,0,0,0.5);
+                    backdrop-filter:blur(2px);
+                    z-index:98
+                }
+
+                #mailchatgpt {
+                    position:fixed;
+                    padding:5px;
+                    width:560px;
+                    height:515px;
+                    border:3px solid rgba(0,0,0,0.8);
+                    background-color:#BEBEBE;
+                    z-index:99;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    overflow:auto;
+                    scrollbar-width:thin;
+                    scrollbar-height:thin
+                }
+
+                #mailchatgptfermer,#mailchatgptenvoyer,#mailchatgptprompt {
+                    float:right;
+                    top:0;
+                    right:0;
+                    position:sticky
+                }
+
+                #mailchatgptenvoyer,#mailchatgptprompt {
+                    margin-right:3px
+                }
+
+                #prompt {
+                    border:1px solid green;
+                    display:none
+                }
+
+                #prompttext {
+                    width:550px;
+                    height:650px
+                }
+
+                #genmail {
+                    border:1px solid red
+                }
+
+                .prop {
+                    width:548px;
+                    margin-bottom:2px
+                }
+
+                #proposition2 {
+                    height:70px
+                }
+
+                .richText {
+                    width:553px;
+                    height:380px
+                }
+
+                .richText .richText-editor {
+                    padding:20px;
+                    max-height:380px;
+                    height:280px;
+                    outline:0;
+                    overflow-y:scroll;
+                    overflow-x:auto
+                }
+
+                .richText::-webkit-scrollbar,::-webkit-scrollbar {
+                    width:8px
+                }
+
+                .richText::-webkit-scrollbar-track,::-webkit-scrollbar-track {
+                    background:0 0
+                }
+
+                .richText::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb {
+                    background-color:#9b9b9b;
+                    border-radius:20px;
+                    border:transparent
+                }
+
+                .richText .richText-toolbar ul li a {
+                    padding:2px 3.9px
+                }
+            </style>
+        </div>
+    </div>
+</div>
