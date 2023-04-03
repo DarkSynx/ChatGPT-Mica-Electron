@@ -1,6 +1,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="/Mica-ChatGPT/favicon.svg">
 
-# Version 1.4 pour windows 8, 10, 11
+# Version 1.5.0 pour windows 8, 10, 11
 
 <br/>
 
