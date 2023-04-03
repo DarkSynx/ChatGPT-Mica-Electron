@@ -66,6 +66,8 @@ TELECHARGER ICI :
 
 1. vous allez dans resources > cfg > add
 2. vous modifier app.json comme ici bas avec "newapp"
+
+
 ```json
 {
 	"gmail" : {
@@ -92,6 +94,7 @@ TELECHARGER ICI :
 	}
 }
 ```
+
 3. vous crez un dossier "newapp" dans "add" 
     cfg > add > newapp
 
@@ -100,6 +103,8 @@ TELECHARGER ICI :
    que vous aurez créé dans cfg > add > newapp
 
 5. un script doit comporter plusieurs chose de départ
+
+
 ```js
 const modulename = 'gmail';
 const version = '1.0a';
@@ -161,6 +166,7 @@ window.addEventListener('load', () => {
         // c'est pour cela qu'il est important de nommer votre module
         
 });
+
 ```
 
 
