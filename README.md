@@ -182,51 +182,59 @@ window.addEventListener('load', () => {
 
 pour version 1.6.0 (avenir) 
 ```js
-// chargement de ipcmain.js contenant les fonctions de base du module
-const ipcmainjs = require(__dirname + '/../ipcmain.js');
-// chargement des fonctions de base du module et des constantes
 const {
-    WinLoad, readFileAsync,
+    WinLoad, readFileAsync, ipcToWebView, sendPromptControle,
     MODULE_NAME, VERSION, MODULE_PATH, ADD_PATH, CFG_PATH, MODULE_FILE_PATH, WEBVIEWLIST,
-    ipcToWebView, sendPromptControle,
     MODULE_FILE_PATH: [
-        JQUERY_PATH // <= ici les nom des variable en lien avec les fichiers contenu dans le dossier du module 👇
-    ]} = ipcmainjs
-    .getFunctions({
-        modulename: 'gmail',
-        version: '1.0a',
-        autor: 'Darksynx',
-        modulefilespath: [
-            'jquery-3.6.3.min.js' // <= ici les nom des fichiers contenu dans le dossier du module ☝️
-        ],
-    });
+        /** MODULE_FILE_PATH tableau de "module_files_path" respecter l'ordre de déclaration **/
+        JQUERY_PATH, JQUERY_RICHTEXT_PATH, // ...
+    ]
+} = require(__dirname + '/../ipcmain.js').getFunctions({
+    modulename: 'gmail',
+    version: '1.0a',
+    autor: 'Darksynx',
+    module_files_path: [
+        /** module_files_path tableau de "MODULE_FILE_PATH" respecter l'ordre de déclaration **/
+        'jquery-3.6.3.min.js',
+        'jquery.richtext.min.js',
+	// ...
+    ]
+});
 
-// quand la page est charger
-WinLoad(JQUERY_PATH, [], function () {
+// constante spécifique à charger avant le chargement de la page
+const DATASVIMAGE = require(DATA_SVIMAGE_PATH).dataimage;
+const PROMPT_MAIL = require(MPROMPT_TEXT_PATH).mailprompt1;
 
-
-    // GTP4 <= je veux envoyer à chatGPT un prompt et récolter l'information 
-    // j'utilise : 
-    sendPromptControle("mon_prompt_en_texte", MODULE_NAME);
-
-    // GTP4 => je veux recevoir l'information 
-    // j'utilise une switch pour que par la suite via d'autre application 
-    // je passe par ici voir la function dans ipcmain.js
-    ipcToWebView(function (arg) {
-        console.log(arg);
-        switch (arg[0]) {
-            case 'gettextrealtime':
-                console.log('gettextrealtime: ' + arg[1]);
-                $('.richText-editor').html(formatTextWithLineBreaks(arg[1]));
-                break
-        }
-    });
-    
-    
-    // NEWAPP => je veux envoyer à une autre NEWAPP2 
-      sendToModule(webviewName, ipcOn, dataExploit);
+// chargement de la page
+WinLoad({
+    jqueryPath: JQUERY_PATH,
+    otherScripts: [JQUERY_RICHTEXT_PATH],
+    winLoad: () => {
 
 
+	    // GTP4 <= je veux envoyer à chatGPT un prompt et récolter l'information 
+	    // j'utilise : 
+	    sendPromptControle("mon_prompt_en_texte", MODULE_NAME);
+
+	    // GTP4 => je veux recevoir l'information 
+	    // j'utilise une switch pour que par la suite via d'autre application 
+	    // je passe par ici voir la function dans ipcmain.js
+	    ipcToWebView((arg) => {
+		console.log(arg);
+		switch (arg[0]) {
+		    case 'gettextrealtime':
+			console.log('gettextrealtime: ' + arg[1]);
+			$('.richText-editor').html(formatTextWithLineBreaks(arg[1]));
+			break
+		}
+	    });
+
+
+	    // NEWAPP => je veux envoyer à une autre NEWAPP2 
+	      sendToModule(webviewName, ipcOn, dataExploit);
+
+
+    }
 });
 ```
 
