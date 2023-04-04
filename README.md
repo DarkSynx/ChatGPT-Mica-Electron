@@ -182,32 +182,20 @@ window.addEventListener('load', () => {
 
 pour version 1.6.0 (avenir) 
 ```js
-const {
-    WinLoad, readFileAsync, ipcToWebView, sendPromptControle,
-    MODULE_NAME, VERSION, MODULE_PATH, ADD_PATH, CFG_PATH, MODULE_FILE_PATH, WEBVIEWLIST,
-    MODULE_FILE_PATH: [
-        /** MODULE_FILE_PATH tableau de "module_files_path" respecter l'ordre de déclaration **/
-        JQUERY_PATH, JQUERY_RICHTEXT_PATH, // ...
-    ]
-} = require(__dirname + '/../ipcmain.js').getFunctions({
+const init = require('../ipcmain.js').init({
     modulename: 'gmail',
     version: '1.0a',
     autor: 'Darksynx',
-    module_files_path: [
-        /** module_files_path tableau de "MODULE_FILE_PATH" respecter l'ordre de déclaration **/
-        'jquery-3.6.3.min.js',
-        'jquery.richtext.min.js',
-	// ...
-    ]
+    module_files_path: [ 'jquery-3.6.3.min.js' ]
 });
+const { WinLoad, ipcToWebView, sendPromptControle, sendToModule } = init;
+const { ODULE_NAME, MODULE_FILE_PATH } = init;
 
 // constante spécifique à charger avant WinLoad
-// ici
 
 // quand la page est charger
 WinLoad({
-    jqueryPath: JQUERY_PATH, // ici si on veut utilisé Jquery on lui indique son chemin défini plus haut
-    otherScripts: [JQUERY_RICHTEXT_PATH], // ici on peut liste différent script à charger aprés jquery
+    jqueryPath: MODULE_FILE_PATH[0], // ici si on veut utilisé Jquery on lui indique son chemin défini plus haut
     winLoad: () => {  // ici commence votre script 
 
 	    // GTP4 <= je veux envoyer à chatGPT un prompt
@@ -229,7 +217,6 @@ WinLoad({
 
 	    // NEWAPP => je veux envoyer à une autre module par exemple NEWAPP2 
 	     sendToModule(webviewName, ipcOn, dataExploit);
-
     }
 });
 
