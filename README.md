@@ -104,7 +104,17 @@ TELECHARGER ICI :
 
 5. un script doit comporter plusieurs chose de départ
 
+faite attention j'ai réalisé des améliorations pour les modules 
+le code de la version 1.5.0 est compatible avec les versions supérieur
+mais la version 1.6.0 non; la 1.6.0 est là pour facilité un visuel d'initialisation
+propre au modules il est fortement conseiller de regarder le fichier ipcmain.js 
 
+petit à petit tous cela va évoluer mon objectif proposer une initialisation de départ la plus 
+simple et évidante pour travailler directement dans WinLoad 
+
+
+
+pour version 1.5.0 
 ```js
 const modulename = 'gmail';
 const version = '1.0a';
@@ -170,6 +180,55 @@ window.addEventListener('load', () => {
 ```
 
 
+pour version 1.6.0 (avenir) 
+```js
+// chargement de ipcmain.js contenant les fonctions de base du module
+const ipcmainjs = require(__dirname + '/../ipcmain.js');
+// chargement des fonctions de base du module et des constantes
+const {
+    WinLoad, readFileAsync,
+    MODULE_NAME, VERSION, MODULE_PATH, ADD_PATH, CFG_PATH, MODULE_FILE_PATH, WEBVIEWLIST,
+    ipcToWebView, sendPromptControle,
+    MODULE_FILE_PATH: [
+        JQUERY_PATH // <= ici les nom des variable en lien avec les fichiers contenu dans le dossier du module 👇
+    ]} = ipcmainjs
+    .getFunctions({
+        modulename: 'gmail',
+        version: '1.0a',
+        autor: 'Darksynx',
+        modulefilespath: [
+            'jquery-3.6.3.min.js' // <= ici les nom des fichiers contenu dans le dossier du module ☝️
+        ],
+    });
+
+// quand la page est charger
+WinLoad(JQUERY_PATH, [], function () {
+
+
+    // GTP4 <= je veux envoyer à chatGPT un prompt et récolter l'information 
+    // j'utilise : 
+    sendPromptControle("mon_prompt_en_texte", MODULE_NAME);
+
+    // GTP4 => je veux recevoir l'information 
+    // j'utilise une switch pour que par la suite via d'autre application 
+    // je passe par ici voir la function dans ipcmain.js
+    ipcToWebView(function (arg) {
+        console.log(arg);
+        switch (arg[0]) {
+            case 'gettextrealtime':
+                console.log('gettextrealtime: ' + arg[1]);
+                $('.richText-editor').html(formatTextWithLineBreaks(arg[1]));
+                break
+        }
+    });
+    
+    
+    // NEWAPP => je veux envoyer à une autre NEWAPP2 
+      sendToModule(webviewName, ipcOn, dataExploit);
+
+
+});
+```
 
 ![pub](https://user-images.githubusercontent.com/9467611/229370614-5f3c4788-5ae3-4d42-937b-5036b7cfb4fe.png)
 
