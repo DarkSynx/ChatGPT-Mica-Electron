@@ -201,22 +201,20 @@ const {
     ]
 });
 
-// constante spécifique à charger avant le chargement de la page
-const DATASVIMAGE = require(DATA_SVIMAGE_PATH).dataimage;
-const PROMPT_MAIL = require(MPROMPT_TEXT_PATH).mailprompt1;
+// constante spécifique à charger avant WinLoad
+// ici
 
-// chargement de la page
+// quand la page est charger
 WinLoad({
-    jqueryPath: JQUERY_PATH,
-    otherScripts: [JQUERY_RICHTEXT_PATH],
-    winLoad: () => {
+    jqueryPath: JQUERY_PATH, // ici si on veut utilisé Jquery on lui indique son chemin défini plus haut
+    otherScripts: [JQUERY_RICHTEXT_PATH], // ici on peut liste différent script à charger aprés jquery
+    winLoad: () => {  // ici commence votre script 
 
-
-	    // GTP4 <= je veux envoyer à chatGPT un prompt et récolter l'information 
+	    // GTP4 <= je veux envoyer à chatGPT un prompt
 	    // j'utilise : 
 	    sendPromptControle("mon_prompt_en_texte", MODULE_NAME);
 
-	    // GTP4 => je veux recevoir l'information 
+	    // GTP4 => je recolte l'information 
 	    // j'utilise une switch pour que par la suite via d'autre application 
 	    // je passe par ici voir la function dans ipcmain.js
 	    ipcToWebView((arg) => {
@@ -229,13 +227,14 @@ WinLoad({
 		}
 	    });
 
-
-	    // NEWAPP => je veux envoyer à une autre NEWAPP2 
-	      sendToModule(webviewName, ipcOn, dataExploit);
-
+	    // NEWAPP => je veux envoyer à une autre module par exemple NEWAPP2 
+	     sendToModule(webviewName, ipcOn, dataExploit);
 
     }
 });
+
+// ici vos fonctions ! 
+// avenir un fichier spécifique 
 ```
 
 ![pub](https://user-images.githubusercontent.com/9467611/229370614-5f3c4788-5ae3-4d42-937b-5036b7cfb4fe.png)
