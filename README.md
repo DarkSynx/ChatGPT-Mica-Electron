@@ -40,6 +40,9 @@
 -----
 
 TELECHARGER ICI : 
+
+<a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/tag/1.6.0-040423">micaChatGPT_test.zip 1.6.0</a>
+
 <a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/tag/1.5.0">micaChatGPT_test.zip 1.5.0</a>
 
 <a href="https://github.com/DarkSynx/Mica-ChatGPT/releases/download/1.4.3/micaChatGPT_1.4.3_b.zip">micaChatGPT_test.zip 1.4.3</a>
@@ -112,7 +115,49 @@ propre au modules il est fortement conseiller de regarder le fichier ipcmain.js
 petit à petit tous cela va évoluer mon objectif proposer une initialisation de départ la plus 
 simple et évidante pour travailler directement dans WinLoad 
 
+pour version 1.6.0 (avenir) 
+```js
+const init = require('../ipcmain.js').init({
+    modulename: 'gmail',
+    version: '1.0a',
+    autor: 'Darksynx',
+    module_files_path: [ 'jquery-3.6.3.min.js' ]
+});
+const { WinLoad, ipcToWebView, sendPromptControle, sendToModule } = init;
+const { ODULE_NAME, MODULE_FILE_PATH } = init;
 
+// constante spécifique à charger avant WinLoad
+
+// quand la page est charger
+WinLoad({
+    jqueryPath: MODULE_FILE_PATH[0], // ici si on veut utilisé Jquery on lui indique son chemin défini plus haut
+    winLoad: () => {  // ici commence votre script 
+
+	    // GTP4 <= je veux envoyer à chatGPT un prompt
+	    // j'utilise : 
+	    sendPromptControle("mon_prompt_en_texte", MODULE_NAME);
+
+	    // GTP4 => je recolte l'information 
+	    // j'utilise une switch pour que par la suite via d'autre application 
+	    // je passe par ici voir la function dans ipcmain.js
+	    ipcToWebView((arg) => {
+		console.log(arg);
+		switch (arg[0]) {
+		    case 'gettextrealtime':
+			console.log('gettextrealtime: ' + arg[1]);
+			$('.richText-editor').html(formatTextWithLineBreaks(arg[1]));
+			break
+		}
+	    });
+
+	    // NEWAPP => je veux envoyer à une autre module par exemple NEWAPP2 
+	     sendToModule(webviewName, ipcOn, dataExploit);
+    }
+});
+
+// ici vos fonctions ! 
+// avenir un fichier spécifique 
+```
 
 pour version 1.5.0 
 ```js
@@ -180,49 +225,7 @@ window.addEventListener('load', () => {
 ```
 
 
-pour version 1.6.0 (avenir) 
-```js
-const init = require('../ipcmain.js').init({
-    modulename: 'gmail',
-    version: '1.0a',
-    autor: 'Darksynx',
-    module_files_path: [ 'jquery-3.6.3.min.js' ]
-});
-const { WinLoad, ipcToWebView, sendPromptControle, sendToModule } = init;
-const { ODULE_NAME, MODULE_FILE_PATH } = init;
 
-// constante spécifique à charger avant WinLoad
-
-// quand la page est charger
-WinLoad({
-    jqueryPath: MODULE_FILE_PATH[0], // ici si on veut utilisé Jquery on lui indique son chemin défini plus haut
-    winLoad: () => {  // ici commence votre script 
-
-	    // GTP4 <= je veux envoyer à chatGPT un prompt
-	    // j'utilise : 
-	    sendPromptControle("mon_prompt_en_texte", MODULE_NAME);
-
-	    // GTP4 => je recolte l'information 
-	    // j'utilise une switch pour que par la suite via d'autre application 
-	    // je passe par ici voir la function dans ipcmain.js
-	    ipcToWebView((arg) => {
-		console.log(arg);
-		switch (arg[0]) {
-		    case 'gettextrealtime':
-			console.log('gettextrealtime: ' + arg[1]);
-			$('.richText-editor').html(formatTextWithLineBreaks(arg[1]));
-			break
-		}
-	    });
-
-	    // NEWAPP => je veux envoyer à une autre module par exemple NEWAPP2 
-	     sendToModule(webviewName, ipcOn, dataExploit);
-    }
-});
-
-// ici vos fonctions ! 
-// avenir un fichier spécifique 
-```
 
 ![pub](https://user-images.githubusercontent.com/9467611/229370614-5f3c4788-5ae3-4d42-937b-5036b7cfb4fe.png)
 
