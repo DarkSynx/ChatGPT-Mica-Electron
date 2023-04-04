@@ -115,7 +115,7 @@ propre au modules il est fortement conseiller de regarder le fichier ipcmain.js
 petit à petit tous cela va évoluer mon objectif proposer une initialisation de départ la plus 
 simple et évidante pour travailler directement dans WinLoad 
 
-pour version 1.6.0 (avenir) 
+pour version 1.6.0 
 ```js
 const init = require('../ipcmain.js').init({
     modulename: 'gmail',
