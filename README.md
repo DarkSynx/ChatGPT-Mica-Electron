@@ -101,7 +101,7 @@ const init = require('../ipcmain.js').init({
     module_files_path: [ 'jquery-3.6.3.min.js' ]
 });
 const { WinLoad, ipcToWebView, sendPromptControle, sendToModule } = init;
-const { ODULE_NAME, MODULE_FILE_PATH } = init;
+const { MODULE_NAME, MODULE_FILE_PATH } = init;
 
 // constante spécifique à charger avant WinLoad
 
