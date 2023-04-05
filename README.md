@@ -84,13 +84,10 @@ TELECHARGER ICI :
 
 5. un script doit comporter plusieurs chose de départ
 
-faite attention j'ai réalisé des améliorations pour les modules 
+***faite attention j'ai réalisé des améliorations pour les modules 
 le code de la version 1.5.0 est compatible avec les versions supérieur
 mais la version 1.6.0 non; la 1.6.0 est là pour facilité un visuel d'initialisation
-propre au modules il est fortement conseiller de regarder le fichier ipcmain.js 
-
-petit à petit tous cela va évoluer mon objectif proposer une initialisation de départ la plus 
-simple et évidante pour travailler directement dans WinLoad 
+propre au modules il est fortement conseiller de regarder le fichier ipcmain.js*** 
 
 pour version 1.6.0 
 ```js
