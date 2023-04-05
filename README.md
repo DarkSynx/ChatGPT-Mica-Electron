@@ -4,34 +4,11 @@
 
 <br/>
 
-***Prêt à converser avec l'avenir ? Découvrez Mica-ChatGPT, une application innovante qui intègre les dernières avancées en matière de prompt engineering et permet de créer vos propres prompts. Disponible en versions libre et entreprise, profitez d'une interface intuitive et agréable grâce à Electron pour échanger en toute simplicité avec ChatGPT, la pointe de l'IA conversationnelle.***
+***Mica-ChatGPT est une application innovante qui exploite les avancées en prompt engineering pour converser avec ChatGPT, une IA conversationnelle avancée. Disponible en versions libre, elle offre une interface intuitive grâce à Electron.***
 
-<br/>
+***L'application permet de créer et d'ajouter des prompts personnalisés répondant aux besoins spécifiques des utilisateurs. La version standard inclut des prompts préexistants et une zone de texte pour ajouter des prompts personnalisés, offrant une expérience de conversation sur mesure.***
 
-![image](https://user-images.githubusercontent.com/9467611/222880561-a9b537ab-646d-4cac-9482-023f7b5bb1cb.png)
-
-<br/>
-
-<p>En outre, l'application permettra également aux utilisateurs de créer et d'ajouter leurs propres prompts personnalisés pour répondre à leurs besoins spécifiques. Cette fonctionnalité de personnalisation permettra aux utilisateurs de définir des phrases ou des questions spécifiques qui déclenchent des réponses et des interactions spécifiques de ChatGPT.
-
-* En somme, la version standard de Mica-ChatGPT comprendra à la fois des prompts préexistants pour une utilisation immédiate, ainsi qu'une zone de texte dédiée pour créer et ajouter des prompts personnalisés, permettant aux utilisateurs de personnaliser leur expérience de conversation avec ChatGPT.</p>
-
-<br/>
-
-![image](https://user-images.githubusercontent.com/9467611/222881599-c54d0762-248e-472b-9e39-274a91b2f374.png)
-
-<br/>
-
-<p>La version entreprise de l'application Mica-ChatGPT offrira une base de données de prompts personnalisable, permettant aux entreprises de définir des prompts spécifiques en fonction de leurs besoins et de les stocker dans une base de données interne pour une utilisation future.
-
-* La zone de demande de don disparaîtra dans la version entreprise, ce qui permettra aux entreprises de personnaliser entièrement l'application en fonction de leurs besoins spécifiques.
-
-* En outre, la version entreprise offrira également la possibilité d'importer et d'exporter des prompts dans un format JSON pour faciliter la gestion et la personnalisation des prompts. Cela permettra aux entreprises de partager facilement avec d'autres membres de leur organisation ou de les importer depuis d'autres sources.
-
-* la version entreprise de Mica-ChatGPT offrira la flexibilité et la personnalisation dont elles ont besoin pour intégrer ChatGPT dans leur flux de travail et répondre à leurs besoins spécifiques en matière de conversation. </p>
-
-
-![image](https://user-images.githubusercontent.com/9467611/229366895-0d3a9b29-9a6c-465f-a8ee-54007fdc617c.png)
+***Cette version permet également d'importer et d'exporter des prompts au format JSON pour faciliter leur gestion et personnalisation. Ainsi, pouvoir partager des prompts avec d'autres membres de leur organisation ou les importer depuis d'autres sources. Mica-ChatGPT en version entreprise offrira la flexibilité nécessaire pour intégrer ChatGPT dans les flux de travail et répondre aux besoins spécifiques en matière de conversation.***
 
 -----
 <video src="https://user-images.githubusercontent.com/9467611/229367187-4503d5c8-d4da-4bd1-81c9-c681df7e1841.mp4" width="640" height="auto" controls>
@@ -52,7 +29,7 @@ TELECHARGER ICI :
 
 ---
 
-###### Il est important de noter que la version standard de l'application Mica-ChatGPT est destinée uniquement à un usage personnel et non commercial. Les entreprises ne doivent pas l'utiliser pour des besoins professionnels, mais plutôt nous contacter par mail à 
+***Il est important de noter que la version standard de l'application Mica-ChatGPT est destinée uniquement à un usage personnel et non commercial. Les entreprises ne doivent pas l'utiliser pour des besoins professionnels, mais plutôt nous contacter par mail à***
   
   <b>repondeur.systeme@gmail.com</b> 
   
